@@ -3,9 +3,9 @@ html(lang="en")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    link(rel="stylesheet", href="/style.css")
     title Document
   body
+    include partials/navbar.pug
     #container
       #wrap 
         form(action="/tambah-data", method="post")

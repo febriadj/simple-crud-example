@@ -2,9 +2,16 @@ const express = require('express');
 const router = express.Router();
 const db = require('../models/db');
 
-router.get('/', (req, res, next) => {
-  res.render('index');
-})
+router.get('/', async (req, res, next) => {
+  let sql = await `SELECT * FROM mahasiswa`;
+  db.query(sql, (err, result, fields) => {
+    if (err) console.log(err);
+
+    res.render('index', {
+      datas: result
+    });
+  });
+});
 
 router.use('/tambah-data', require('./tambah-data'));
 
