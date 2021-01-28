@@ -7,6 +7,8 @@ app.set('view engine', 'pug');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+app.use(require('./router/route'));
+
 const port = 3000;
 app.listen(port, () => {
   console.log(`Listening on 127.0.0.0:${port}`);
