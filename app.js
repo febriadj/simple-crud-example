@@ -11,5 +11,5 @@ app.use(require('./router/route'));
 
 const port = 3000;
 app.listen(port, () => {
-  console.log(`Listening on 127.0.0.0:${port}`);
+  console.log(`listening on 127.0.0.0:${port}`);
 });
