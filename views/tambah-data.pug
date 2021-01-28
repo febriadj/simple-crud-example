@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="/style.css")
+    title Document
+  body
+    #container
+      #wrap 
+        form(action="/tambah-data", method="post")
+          input(type="text", name="nim" placeholder="Input NIM" class="input nim")
+          input(type="text", name="nama" placeholder="Input Nama" class="input nama")
+          input(type="email", name="email" placeholder="Email" class="input email")
+          input(type="text", name="fakultas" placeholder="Fakultas" class="input fakultas")
+          button(type="submit" class="input submit") Submit Data

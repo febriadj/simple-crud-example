@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 * { padding: 0; margin: 0; }
-body { font-family: 'Roboto Mono', sans-serif; font-size: 14px; }
+body { font-family: 'Roboto Mono', sans-serif; font-size: 13px; }
 
 #container {
   width: 100%;
@@ -18,4 +18,21 @@ body { font-family: 'Roboto Mono', sans-serif; font-size: 14px; }
 #container #wrap table tr td {
   border: 1px solid #dddddd;
   padding: 10px;
+}
+#container #wrap table tr .no {
+  width: 20px;
+}
+#container #wrap table tr .action-tab a {
+  color: #000;
+  margin: 0 20px 0 0;
+}
+
+#container #wrap form {
+  display: flex; flex-direction: column; align-items: flex-start;
+}
+#container #wrap form .input {
+  padding: 15px;
+  outline: none;
+  border: 1px solid #303030;
+  margin: 10px 0;
 }
