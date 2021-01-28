@@ -6,9 +6,9 @@ router.get('/', (req, res, next) => {
   res.render('tambah-data');
 });
 
-router.post('/', (req, res, next) => {
+router.post('/', async (req, res, next) => {
   const { nim, nama, email, fakultas } = req.body;
-  let sql = `INSERT INTO mahasiswa VALUES ( '${nim}', '${nama}', '${email}', '${fakultas}' )`;
+  let sql = await `INSERT INTO mahasiswa VALUES ( '${nim}', '${nama}', '${email}', '${fakultas}' )`;
   db.query(sql, (err, result, fields) => {
     if (err) console.log(err);
 

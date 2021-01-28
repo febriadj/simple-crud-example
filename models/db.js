@@ -7,19 +7,20 @@ const db = mysql.createConnection({
   database: 'nodejs_project'
 });
 
-let createTable = `CREATE TABLE IF NOT EXISTS mahasiswa(
-                    nim VARCHAR(225) PRIMARY KEY,
-                    nama VARCHAR(225),
-                    email VARCHAR(225),
-                    fakultas VARCHAR(225)
-                  )`;
+// let createTable = `CREATE TABLE IF NOT EXISTS mahasiswa(
+//                     nim VARCHAR(225) PRIMARY KEY,
+//                     nama VARCHAR(225),
+//                     email VARCHAR(225),
+//                     fakultas VARCHAR(225)
+//                   )`;
 
-db.query(createTable, (err, result) => {
-  if (err) console.log(err);
-})
+// db.query(createTable, (err, result) => {
+//   if (err) throw err;
+//   console.log('table created');
+// });
 
 db.connect(err => {
-  if (err) console.log(err);
+  if (err) throw err;
   console.log('mysql connected');
 });
 

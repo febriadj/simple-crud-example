@@ -24,6 +24,6 @@ html(lang="en")
               td #{data.email}
               td #{data.fakultas}
               td.action-tab
-                a(href="/" class="action edit") Edit
-                a(href="/" class="action delete") Delete
+                a(href='/' + data.nim class="action edit") Edit
+                a(href='/' + data.nim class="action delete") Delete
           - })
