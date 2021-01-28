@@ -13,13 +13,8 @@ router.get('/', async (req, res, next) => {
   });
 });
 
-router.get('/:nim', (req, res, next) => {
-  let params = req.params.nim;
-  console.log(params);
-  res.end();
-})
-
 router.use('/tambah-data', require('./tambah-data'));
+router.use(require('./edit-data'));
 
 router.use((req, res, next) => {
   res.send('404 Not Found');

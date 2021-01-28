@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Edit Data
+  body
+  include partials/navbar.pug
+  #container
+    #wrap
+      - if ( data != undefined ) {
+      form(action="/edit-data", method="post")
+        input(type="text", name="nim" placeholder='NIM' class="input nim" value=data.nim)
+        input(type="text", name="nama" placeholder="Input Nama" class="input nama" value=data.nama)
+        input(type="email", name="email" placeholder="Email" class="input email" value=data.email)
+        input(type="text", name="fakultas" placeholder="Fakultas" class="input fakultas" value=data.fakultas)
+        button(type="submit" class="input submit") Edit Data
+      - }
