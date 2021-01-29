@@ -14,7 +14,7 @@ router.get('/', async (req, res, next) => {
 });
 
 router.use('/tambah-data', require('./tambah-data'));
-router.use(require('./edit-data'));
+router.use(require('./edit-delete'));
 
 router.use((req, res, next) => {
   res.send('404 Not Found');

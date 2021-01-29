@@ -25,5 +25,5 @@ html(lang="en")
               td #{data.fakultas}
               td.action-tab
                 a(href='/' + data.nim class="action edit") Edit
-                a(href='/' + data.nim class="action delete") Delete
+                a(href='/' + data.nim + '?del=' + data.nim class="action delete") Delete
           - })
